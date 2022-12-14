@@ -1,8 +1,8 @@
 # Site Settings
 theme: mere-blog-theme
-title: Mere Blog Theme
-tagline: Mere Blog Theme
-email: your-email@domain.com
+title: Liz Metzger's Portfolio
+tagline: Liz Metzger's Portfolio
+email: liz.mtzgr.00@gmail.com
 description: >
   The demo site for Mere Blog Theme, made for Jekyll and GitHub pages websites
 baseurl: "/mere-blog-theme"
