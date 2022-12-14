@@ -1,10 +1,10 @@
 # Site Settings
-remote_theme: mere-blog-theme
+theme: mere-blog-theme
 title: Liz Metzger's Portfolio
 tagline: Liz Metzger's Portfolio
 email: liz.mtzgr.00@gmail.com
 description: >
-  The demo site for Mere Blog Theme, made for Jekyll and GitHub pages websites
+  I'm an MS in Robotics student at Northwestern.
 baseurl: /portfolio
 url: lizmetzger.github.io
 permalink: pretty
