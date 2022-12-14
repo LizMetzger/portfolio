@@ -1,6 +1,6 @@
 --- 
 layout: post
-title: First Post
+title: Pincher
 image: /img/home.jpg
 ---
 

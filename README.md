@@ -1,4 +1,4 @@
-# mere-blog-theme
+# mere-blog-theme (TEST)
 
 [![Gem Version](https://badge.fury.io/rb/mere-blog-theme.svg)](https://badge.fury.io/rb/mere-blog-theme) 
 ![Gem](https://img.shields.io/gem/dt/mere-blog-theme)
