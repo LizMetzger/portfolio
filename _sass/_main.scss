@@ -14,11 +14,12 @@ h1, h2, h3, h4, h5, h6 {
 // Colours
 $primary: #4fa6a3 !default;
 $dark: #363636;
-$light: #f6f6f6;
+$light: #C9DAEA;
 $white: #ffffff;
+$topbar: #4fa6a3;
 
 //Cards
-$card-shadow: none;
+$card-shadow: 15px 15px 10px #afb2b4;
 $card-footer-border-top: none;
 $card-background-color: $light;
 
@@ -29,9 +30,9 @@ $pagination-current-background-color: $dark;
 $pagination-current-border-color: $dark;
 
 // Radius
-$radius: 0;
-$radius-large: 0;
-$radius-small: 0;
+$radius: 5;
+$radius-large: 5;
+$radius-small: 15;
 
 @import "../node_modules/bulma/bulma.sass";
 @import "layout";
