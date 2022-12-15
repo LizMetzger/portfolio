@@ -2,6 +2,7 @@
 layout: post
 title: Robot Jenga Assistant
 image: /img/home.jpg
+author: Liz Metzger
 ---
 
 In this project I worked with a group using ROS2, computer vision, and machine learning to make a robotic jenga assistant. I mainly worked on the computer vision aspects of this 

@@ -2,6 +2,7 @@
 layout: post
 title: Physics Simulator from Scratch
 image: /img/home.jpg
+author: Liz Metzger
 ---
 
 In the image below you can see all the fames I used and the basic set up of my system. I had five frames for my jack and my box where each body had a frame (a) at its center of mass which was related to the world frame through a rotation and a translation. The box also had four frames (b, c, d, e) with one in the middle of each of its walls related to the a frame and the back had four frames with one at each of its ends also related to the jack's a frame.
