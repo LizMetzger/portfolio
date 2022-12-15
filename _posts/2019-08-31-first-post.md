@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: 911 Aircooled Porsche Rebuild
+intro: Machining, Welding, Electrical
 image: /img/home.jpg
 ---
 

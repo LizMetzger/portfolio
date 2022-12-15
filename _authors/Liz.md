@@ -1,9 +1,9 @@
 ---
-short_name: C.S. Rhymes
-title: C.S. Rhymes - web dev and author
-name: C.S. Rhymes
-position: Web Designer
-description: C.S. Rhymes is a web developer and a part time author, specialising in Laravel, Vue.js and developing Jekyll themes.
+short_name: Liz Metzger
+title: Liz Metzger - MS in Robotics
+name: Liz Metzger
+position: MS in Robotics
+description: I have my BS in Biomedical Engineering from UC Davis and my MS in robotics from Northwestern.
 avatar: /img/avatar.png
 website: https://www.csrhymes.com
 facebook: https://www.facebook.com/
