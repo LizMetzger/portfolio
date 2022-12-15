@@ -5,6 +5,8 @@ image: /img/home.jpg
 author: Liz Metzger
 ---
 
+(ROS2, Computer Vision, Machine Learning)
+
 In this project I worked with a group using ROS2, computer vision, and machine learning to make a robotic jenga assistant. I mainly worked on the computer vision aspects of this
 project. Our main goal was to make it so that when there was a brick partially pushed out of the jenga tower the robot would be able to find the brick, move to it,
 grab it, remove it from the tower, place it on top in the right orientation, then do it again.
