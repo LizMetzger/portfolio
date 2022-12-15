@@ -42,7 +42,7 @@ defaults:
       path: ""
       type: "posts"
     values:
-      author: "C.S. Rhymes"
+      author: "Liz Metzger"
       layout: post
       image: /img/home.jpg
       show_sidebar: true
