@@ -1,7 +1,6 @@
 --- 
 layout: post
 title: Physics Simulator from Scratch
-intro: Python (sympy), Dynamics
 image: /img/home.jpg
 ---
 

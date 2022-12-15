@@ -1,7 +1,6 @@
 --- 
 layout: post
 title: Robot Jenga Assistant
-intro: ROS2, Computer Vision, Machine Learning
 image: /img/home.jpg
 ---
 
