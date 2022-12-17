@@ -1,7 +1,7 @@
 --- 
 layout: post
 title: Physics Simulator from Scratch
-image: /videos/Jack-in-the-box.gif
+image: /videos/jack_in_the_box.gif
 author: Liz Metzger
 ---
 
