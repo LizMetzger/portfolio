@@ -6,7 +6,7 @@ author: Liz Metzger
 ---
 
 (Python -- Sympy, Dynamics)
- 
+
 The purpose of this project was to simulate the physics of a jack falling inside of a rotating box by using the forced and constrained Euler-Lagrange equations to calculate and simulate the impacts.
  
 In the image below you can see all the frames I used and the basic setup of my system. I had a world frame at the center of my box and five frames for my jack and my box where each body had a frame (a) at its center of mass. The (a) frame of both the box and the jack were related to the world frame with both a rotation and translation in a matrix. The other four frames for the box (b, c, d, e) are in the middle of each of its walls related to the (a) frame and the jack's other four frames are at each of its ends also related to the jack's (a) frame.
