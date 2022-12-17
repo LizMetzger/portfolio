@@ -26,3 +26,8 @@ I found my external forces by applying a force in the +y direction to my box whi
 To check for impacts I evaluate my phi values at my initial condition when I know that no impact is happening then compare them to the evaluated phis at each time step. I am checking for a change in sign and if I find a change in sign then I know that an impact has occurred at that impact equation. Then I am able to return the number of the contraine equation and pass it to my update impact function which uses my phi and my updated impact equations with dummy variables to solve for lambda. I then check for the solution that has a non-zero lambda and uses those values to assign new qd values and I return to the normal loop. This happens until my code evaluates at all time steps.
  
 Doing this gives me a list of x,y, and theta values for the jack and the box at each timestep which I used in my animation function to animate the entire system.
+
+
+
+![Jack-in-the-box](https://user-images.githubusercontent.com/113066141/208222492-8223640a-71ec-4858-81c7-d2e8da4e67f0.gif)
+
