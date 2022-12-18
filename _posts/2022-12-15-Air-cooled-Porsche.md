@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 911 Aircooled Porsche Rebuild
-image: /img/home.jpg
+image: /images/911.png
 author: Liz Metzger
 ---
 
