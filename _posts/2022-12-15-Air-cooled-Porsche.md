@@ -15,6 +15,9 @@ In rebuilding the Porsche the largest task was putting in a new turbo that was l
 ![intercooler_mount_911](https://user-images.githubusercontent.com/113066141/208264209-e47b0da3-5542-4bcc-8d79-5fab76f54e54.jpg)
 
 
+![intercooler_bracket_911](https://user-images.githubusercontent.com/113066141/208279157-6fbbc285-705e-4d60-aede-3a9babf281ff.jpg)
+
+
 This next image shows the new tubing we cut tacked to the intercooler and the supporting mount that I made screwed onto it. To make the brackets I would first make them out of a thick piece of cardstock to get the shape, bends, and holes in the right spots. Then I traced my template onto a piece of steel or aluminum and would cut it out with the plasma cutter or bandsaw depending on the part. After the part was cut out I would spend time with the belt sander getting a good edge finish and making sure that the edges were clean and that the piece looked nice. Once the piece was cleaned up then we could put the appropriate bends in it and get it mounted in the car. I also made a new bracket for the turbo that attached it to the car.
 
 
