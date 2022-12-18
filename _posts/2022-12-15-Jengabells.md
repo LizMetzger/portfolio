@@ -1,7 +1,7 @@
 --- 
 layout: post
 title: Robot Jenga Assistant
-image: /videos/jengbells-presentation.gif
+image: /videos/jengabells_short.gif
 author: Liz Metzger
 ---
 
