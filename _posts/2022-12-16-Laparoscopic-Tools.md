@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Improved Tools for Laparoscopic Surgery
-image: /images/assembled_laprascopic.jpg
+image: /images/assembles_lapra_cropped.jpg
 author: Liz Metzger
 ---
 
