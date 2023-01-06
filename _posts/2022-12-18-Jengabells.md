@@ -30,3 +30,9 @@ After the block is placed the program goes back to scanning for pieces. During t
 
 
 {% include youtube.html id="ZFCv9j5TN58" %}
+
+Group Members:
+Liz Metzger
+Katie Hughes
+Alyssa Chen
+Hang Yin
