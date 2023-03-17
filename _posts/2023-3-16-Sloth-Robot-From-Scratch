@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sloth-bot from Scratch
-image: /videos/sloth-bot-climb-up-down.gif
+image: /videos/sloth_bot_climb_up_down.gif
 author: Liz Metzger
 ---
 
@@ -46,3 +46,5 @@ Autonomy:
 To implement autonomy I constrained the problem to a single configuration of the ladder to make sure that I could create a consistent climbing gait. I started doing this by finding a series of motions that worked well to release the hands, pull the arm out of the ladder, lift the hand up, and grab the next rung. Once I had each of those sequences worked out I started to string them together into longer sequences until I had a fully autonomous climbing sequence.
 TODO:
 Include the first video again but big 
+
+See my [GitHub Repo](https://pages.github.com/)!
