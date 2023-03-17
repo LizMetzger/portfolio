@@ -43,7 +43,12 @@ Electrical Design:
 One of the main reasons I chose the dynamixel servos was that I knew they had a relatively straightforward power and communication protocol. This simplified the design of my robot significantly since I just needed to connect my lipo battery to the powerhub and then chain my servos and connect them to the hub. Communication was also handled through the hub as I attached the dynamixel U2D2 communication converter to the power hub and that allowed me to control the servos from my laptop and the Jetson nano. I was also able to power the jetson nano off of the same lipo battery by creating a power cable that went to its DC barrel jack. 
 
 
-![SlothWiringDiagram](https://user-images.githubusercontent.com/113066141/225979822-29700090-b754-4848-a92c-a14cbae265f8.jpeg)
+{:refdef: style="text-align: center;"}
+![SlothWiringDiagram](https://user-images.githubusercontent.com/113066141/225979822-29700090-b754-4848-a92c-a14cbae265f8.jpeg){: width="60%"}
+{: refdef}
+{:refdef: style="text-align: center;"}
+_Full Application Flowchart TODO._
+{: refdef}
 
 
 Software:
@@ -56,3 +61,5 @@ TODO:
 Include the first video again but big 
 
 See my [GitHub Repo](https://pages.github.com/)!
+
+
