@@ -20,8 +20,10 @@ TODO:
 Insert nice calculations for torque, maybe also the page of the dynamixel data sheet?? 
 
 As a proof of concept of my mechanical design, I created a prototype out of laser cut acrylic with simple axle joints so that I could test the way that the robot would move. After this test I was pretty comfortable with the way that the robot would move and decided to move forward.
-TODO:
-Insert picture(s) of my prototype (glue two together)
+
+
+![sloth_prototype](https://user-images.githubusercontent.com/113066141/225827604-8a6fa98d-1ae1-4140-b1ad-941c487c1daf.jpg)
+
 
 I designed the arms of the robot so that the hands could be easily removed and had the least amount of printing needed to increase the speed that I could iterate the design. I knew that the hands would be a really crucial design point so I felt really strongly about them being easy to change. The main challenge that I faced with them was that they needed a way to latch onto the bar and secure the hand from rotating while it raised the body of the robot. The rotating hand was a big issue for autonomy because it was really inconsistent about how much the hand would rotate so it was unpredictable how far the joint needed to turn to be able to reach the bar above it. 
 
