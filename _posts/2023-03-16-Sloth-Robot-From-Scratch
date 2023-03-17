@@ -23,9 +23,11 @@ As a proof of concept of my mechanical design, I created a prototype out of lase
 TODO:
 Insert picture(s) of my prototype (glue two together)
 
-I designed the arms of the robot so that the hands could be easily removed and had the least amount of printing needed to increase the speed that I could iterate the design. I knew that the hands would be a really crucial design point so I felt really strongly about them being easy to change. The main challenge that I faced with them was that they needed a way to latch onto the bar and secure the hand from rotating while it raised the body of the robot (see image below). The rotating hand was a big issue for autonomy because it was really inconsistent about how much the hand would rotate so it was unpredictable how far the joint needed to turn to be able to reach the bar above it. 
-TODO:
-Insert picture of the hand rotating
+I designed the arms of the robot so that the hands could be easily removed and had the least amount of printing needed to increase the speed that I could iterate the design. I knew that the hands would be a really crucial design point so I felt really strongly about them being easy to change. The main challenge that I faced with them was that they needed a way to latch onto the bar and secure the hand from rotating while it raised the body of the robot. The rotating hand was a big issue for autonomy because it was really inconsistent about how much the hand would rotate so it was unpredictable how far the joint needed to turn to be able to reach the bar above it. The image below shows my first design (left) and my final design (right).
+
+
+![sloth_hands](https://user-images.githubusercontent.com/113066141/225815053-bbb5e9d2-afa9-4a78-9903-7b8fb94945fb.jpg)
+
 
 To fix this rotation issue I added a lip onto the back of the hand that would lock the hand onto the bar so it wouldn’t rotate. This made releasing the hand from the bar more difficult but since the load from rotating was only on one side of the hand I ended up tapering the lip so that it was easier to create a reliable autonomous release motion. 
 TODO:
@@ -37,7 +39,7 @@ Electrical Design:
 One of the main reasons I chose the dynamixel servos was that I knew they had a relatively straightforward power and communication protocol. This simplified the design of my robot significantly since I just needed to connect my lipo battery to the powerhub and then chain my servos and connect them to the hub. Communication was also handled through the hub as I attached the dynamixel U2D2 communication converter to the power hub and that allowed me to control the servos from my laptop and the Jetson nano. I was also able to power the jetson nano off of the same lipo battery by creating a power cable that went to its DC barrel jack. 
 
 
-![](images/Sloth_Wiring_Diagram.jpg)
+![Sloth_Wiring_Diagram](https://user-images.githubusercontent.com/113066141/225814752-ad545134-2962-48e6-af02-d93f0d3dc1f4.jpg)
 
 
 Software:
