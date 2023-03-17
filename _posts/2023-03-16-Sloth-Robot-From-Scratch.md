@@ -5,7 +5,7 @@ image: /videos/sloth_cropped.gif
 author: Liz Metzger
 ---
 
-(C++, Solidworks, 3D-Printing)
+(C++, Solidworks, 3D Printing)
 
 TODO:
 Edit a video for the front page: all the way up, and down, regular speed, speed it up, end regular speed
