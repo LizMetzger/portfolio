@@ -14,7 +14,7 @@ This was a 10 week project where the objective was to build a robot that could a
 This robot uses two *degrees of freedom -roll and pitch- to climb up and down a ladder. The robot is designed to be lightweight since there is a large load being placed on the servos that rotate the body of the robot upward. I did force calculations to make sure that the load I was asking the servos to carry was reasonable and within their limitations. I did these calculations before I knew the final design of my robot so I used a 1.5x margin of safety and rounded the weight of all my components up. This calculation was a big factor in which servos I ended up choosing since I wanted them to be light but strong and reliable. 
 
 
-![sloth_calcs](https://user-images.githubusercontent.com/113066141/226031570-ff06fac0-ddde-4442-9d09-650e0ceab84d.jpg)
+![sloth_calcs](https://user-images.githubusercontent.com/113066141/226038104-bfa1cc96-ddd6-4439-8552-48f7dd453667.jpg)
 
 
 As a proof of concept of my mechanical design, I created a prototype out of laser cut acrylic with simple axle joints so that I could test the way that the robot would move. After this test I was pretty comfortable with the way that the robot would move and decided to move forward.
