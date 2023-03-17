@@ -1,7 +1,7 @@
 --- 
 layout: post
 title: Sloth Robot From Scratch
-image: /videos/sloth_cropped.gif
+image: /videos/sloth_cropped2.gif
 author: Liz Metzger
 ---
 
