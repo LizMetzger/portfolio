@@ -12,8 +12,9 @@ Edit a video for the front page: all the way up, and down, regular speed, speed 
 
 This was a 10 week project where the objective was to build a robot that could autonomously climb a ladder from scratch. I went through the whole process of designing, building, and programming this robot.
 
-Mechanical Design:
-This robot uses two degrees of freedom -roll and pitch- to climb up and down a ladder. The robot is designed to be lightweight since there is a large load being placed on the servos that rotate the body of the robot upward. I did force calculations to make sure that the load I was asking the servos to carry was reasonable and within their limitations. I did these calculations before I knew the final design of my robot so I used a 1.5x margin of safety and rounded the weight of all my components up. This calculation was a big factor in which servos I ended up choosing since I wanted them to be light but strong and reliable. 
+**Mechanical Design:**
+
+This robot uses two *degrees of freedom -roll and pitch- to climb up and down a ladder. The robot is designed to be lightweight since there is a large load being placed on the servos that rotate the body of the robot upward. I did force calculations to make sure that the load I was asking the servos to carry was reasonable and within their limitations. I did these calculations before I knew the final design of my robot so I used a 1.5x margin of safety and rounded the weight of all my components up. This calculation was a big factor in which servos I ended up choosing since I wanted them to be light but strong and reliable. 
 TODO:
 Insert nice calculations for torque, maybe also the page of the dynamixel data sheet?? 
 
@@ -37,18 +38,21 @@ To fix this rotation issue I added a lip onto the back of the hand that would lo
 
 I went through a few other design ideas like adding a “foot” to the robot to anchor it on the bottom of the body, but that meant that I would never be able to climb rungs that were not a set distance apart. I had a similar issue with adding a lip onto the lower part of the arm that would engage the rung below the robot because I thought it was limiting and when I tested adding that lip it actually made it even harder to disengage the hand from the bar than the design I ended up going with. 
 
-Electrical Design:
+**Electrical Design:**
+
 One of the main reasons I chose the dynamixel servos was that I knew they had a relatively straightforward power and communication protocol. This simplified the design of my robot significantly since I just needed to connect my lipo battery to the powerhub and then chain my servos and connect them to the hub. Communication was also handled through the hub as I attached the dynamixel U2D2 communication converter to the power hub and that allowed me to control the servos from my laptop and the Jetson nano. I was also able to power the jetson nano off of the same lipo battery by creating a power cable that went to its DC barrel jack. 
 
 
 ![SlothWiringDiagram](https://user-images.githubusercontent.com/113066141/225979822-29700090-b754-4848-a92c-a14cbae265f8.jpeg)
 
 
-Software:
+**Software:**
+
 I used the dynamixel SDK to interface and control my servos. The first test I did to make sure that my servos were communicating as I expected was using the SDK read_write example to lift the robot with one arm. I wrote different scripts in C++ to control the robot in different ways including: full teleop, full autonomy, and a hybrid mode where the climb motion of each arm is autonomous but can be commanded by the user. I was able to compile my code so that it ran on the Jetson Nano and my robot could run unteathered.
 
 
-Autonomy:
+**Autonomy:**
+
 To implement autonomy I constrained the problem to a single configuration of the ladder to make sure that I could create a consistent climbing gait. I started doing this by finding a series of motions that worked well to release the hands, pull the arm out of the ladder, lift the hand up, and grab the next rung. Once I had each of those sequences worked out I started to string them together into longer sequences until I had a fully autonomous climbing sequence.
 
 
