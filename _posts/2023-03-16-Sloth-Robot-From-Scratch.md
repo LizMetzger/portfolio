@@ -7,8 +7,6 @@ author: Liz Metzger
 
 (C++, Solidworks, 3D-Printing)
 
--possibly OpenCV/ROS2
-
 TODO:
 Edit a video for the front page: all the way up, and down, regular speed, speed it up, end regular speed
 
@@ -46,15 +44,15 @@ One of the main reasons I chose the dynamixel servos was that I knew they had a 
 ![SlothWiringDiagram](https://user-images.githubusercontent.com/113066141/225979822-29700090-b754-4848-a92c-a14cbae265f8.jpeg)
 
 
-#Software:#
+Software:
 I used the dynamixel SDK to interface and control my servos. The first test I did to make sure that my servos were communicating as I expected was using the SDK read_write example to lift the robot with one arm. I wrote different scripts in C++ to control the robot in different ways including: full teleop, full autonomy, and a hybrid mode where the climb motion of each arm is autonomous but can be commanded by the user. I was able to compile my code so that it ran on the Jetson Nano and my robot could run unteathered.
 
 
 Autonomy:
 To implement autonomy I constrained the problem to a single configuration of the ladder to make sure that I could create a consistent climbing gait. I started doing this by finding a series of motions that worked well to release the hands, pull the arm out of the ladder, lift the hand up, and grab the next rung. Once I had each of those sequences worked out I started to string them together into longer sequences until I had a fully autonomous climbing sequence.
-TODO:
-Include the first video again but big 
-
-See my [GitHub Repo](https://pages.github.com/)!
 
 
+{% include youtube.html id="ZVxYDPtrugs" %}
+
+
+Check out my [GitHub Repo](https://pages.github.com/)!
