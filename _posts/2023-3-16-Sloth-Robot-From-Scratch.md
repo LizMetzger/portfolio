@@ -36,10 +36,8 @@ One of the main reasons I chose the dynamixel servos was that I knew they had a 
 TODO:
 Create a pretty wiring diagram 
 Software:
-I used the dynamixel SDK to interface and control my servos. The first test I did to make sure that my servos were communicating as I expected was using the SDK read_write example to lift the robot with one arm. I wrote different scripts in C++ to control the robot in different ways including: full teleop, full autonomy, and a hybrid mode where the climb motion of each arm is autonomous but can be commanded by the user. I was able to compile my code so that it ran on the Jetson Nano and my robot could run autonomously and fully untethered. 
-TODO:
-Get a video of untethered climbing, insert it
-****Once I got to the point that the autonomous climb was working I added computer vision to identify if there was still a rung to climb above the robot. I used OpenCV, canny edge detection, and april tags to find if there were bars above the robot’s hands. If it detected a bar with the edge detection then it would call the climb sequence for the hand it detected was lower on the adder based on its apriltag identifier. 
+I used the dynamixel SDK to interface and control my servos. The first test I did to make sure that my servos were communicating as I expected was using the SDK read_write example to lift the robot with one arm. I wrote different scripts in C++ to control the robot in different ways including: full teleop, full autonomy, and a hybrid mode where the climb motion of each arm is autonomous but can be commanded by the user. I was able to compile my code so that it ran on the Jetson Nano and my robot could run unteathered.
+
 
 Autonomy:
 To implement autonomy I constrained the problem to a single configuration of the ladder to make sure that I could create a consistent climbing gait. I started doing this by finding a series of motions that worked well to release the hands, pull the arm out of the ladder, lift the hand up, and grab the next rung. Once I had each of those sequences worked out I started to string them together into longer sequences until I had a fully autonomous climbing sequence.
