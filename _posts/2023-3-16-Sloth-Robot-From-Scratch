@@ -5,7 +5,9 @@ image: /videos/sloth_bot_climb_up_down.gif
 author: Liz Metzger
 ---
 
-(C++, Solidworks, 3D-Printing) -possibly OpenCV/ROS2
+(C++, Solidworks, 3D-Printing)
+
+-possibly OpenCV/ROS2
 
 TODO:
 Edit a video for the front page: all the way up, and down, regular speed, speed it up, end regular speed
