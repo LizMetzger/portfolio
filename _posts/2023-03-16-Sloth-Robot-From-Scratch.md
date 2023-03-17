@@ -43,15 +43,10 @@ Electrical Design:
 One of the main reasons I chose the dynamixel servos was that I knew they had a relatively straightforward power and communication protocol. This simplified the design of my robot significantly since I just needed to connect my lipo battery to the powerhub and then chain my servos and connect them to the hub. Communication was also handled through the hub as I attached the dynamixel U2D2 communication converter to the power hub and that allowed me to control the servos from my laptop and the Jetson nano. I was also able to power the jetson nano off of the same lipo battery by creating a power cable that went to its DC barrel jack. 
 
 
-{:refdef: style="text-align: center;"}
-![SlothWiringDiagram](https://user-images.githubusercontent.com/113066141/225979822-29700090-b754-4848-a92c-a14cbae265f8.jpeg){: width="60%"}
-{: refdef}
-{:refdef: style="text-align: center;"}
-_Full Application Flowchart TODO._
-{: refdef}
+![SlothWiringDiagram](https://user-images.githubusercontent.com/113066141/225979822-29700090-b754-4848-a92c-a14cbae265f8.jpeg)
 
 
-Software:
+#Software:#
 I used the dynamixel SDK to interface and control my servos. The first test I did to make sure that my servos were communicating as I expected was using the SDK read_write example to lift the robot with one arm. I wrote different scripts in C++ to control the robot in different ways including: full teleop, full autonomy, and a hybrid mode where the climb motion of each arm is autonomous but can be commanded by the user. I was able to compile my code so that it ran on the Jetson Nano and my robot could run unteathered.
 
 
