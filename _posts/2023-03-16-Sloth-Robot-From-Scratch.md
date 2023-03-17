@@ -7,9 +7,6 @@ author: Liz Metzger
 
 (C++, Solidworks, 3D Printing)
 
-TODO:
-Edit a video for the front page: all the way up, and down, regular speed, speed it up, end regular speed
-
 This was a 10 week project where the objective was to build a robot that could autonomously climb a ladder from scratch. I went through the whole process of designing, building, and programming this robot.
 
 **Mechanical Design:**
