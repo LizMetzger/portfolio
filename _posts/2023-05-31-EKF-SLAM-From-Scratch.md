@@ -1,13 +1,13 @@
 --- 
 layout: post
 title: Extended Kalman Filter SLAM from Scratch
-image: /videos/sloth_cropped2.gif
+image: /videos/SLAM_demo.gif
 author: Liz Metzger
 ---
 
 (C++, ROS2)
 
-[insert video of simulation working]
+{% include youtube.html id="wWTfin3Q1rQ" %}
 
 In this project I implemented an extended kalman filter SLAM algorithm from scratch on a simulated turtlebot3. The simulation could be viewed in Rviz and the whole project was done leveraging ROS2 and C++. A turtlebot3 is a differential drive robot with 360 degree lidar data and it was known that the robot would be exploring an environment with cylindrical objects which it would need to detect and identify. 
 
@@ -24,3 +24,6 @@ The Kalman Filter combined the data about where the robot was according to odome
 
 
 In the simulation the real position of the obstacles and robot were represented with red cylinders and the algorithm’s best estimation was represented in green. The blue robot model represents the position of the robot based on the odometry calculations.
+
+
+Check out my [GitHub Repo](https://github.com/LizMetzger/EKF_SLAM)!
