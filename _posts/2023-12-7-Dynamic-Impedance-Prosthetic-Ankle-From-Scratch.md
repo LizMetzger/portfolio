@@ -54,7 +54,16 @@ I fixed this problem by designing a threaded outer housing that the circular win
 
 [insert picture/video of this]
 
-At this point I had a working mechanism for modulating impedance and I could move forward to integrating it into an ankle.
+## Testing and Results:
+
+To evaluate if my mechanism was actually changing the stiffness of the spring in the predicted way, I did some quantitative testing of the mechanism using an Instron force machine. I placed the canister in the machine and recorded the force required to reach a constant displacement. The machine kept track and stored the data for the detected force at all displacements so I was able to graph and extrapolate a k value.
+
+[insert testing video]
+
+I recorded five trials at each of the different numbers of active coils (2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5) and plotted the calculated k of the spring against the theoretical values of the spring. The k of the spring was found using $$k = F/x$$ and the theoretical values were calculated using $$k = d^4*G / 8D^3na$$ where $d$ = 0.125in (3.175), $G$ = 12,000,000 psi (79,00 Mpa), $D$ = 1.219in (30.9626mm), and na is the number of active coils. Below is a graph of my experimental results obtained by using the Instron compared to the theoretical values and I found that my results almost perfectly matched the theoretical results. I believe that the offset is due to compliance in the 3D printed and laser cut components of the device.
+
+![linear_cansiter_test_results](https://github.com/LizMetzger/prosthetic_ankle/assets/113066141/3efbd44f-4fe8-40c4-aad6-b05f0c2b12cf)
+
 
 # Ankle Prosthetic Design
 
@@ -76,6 +85,10 @@ Both of the arms of the device rotate around a common axle but rotate independen
 
 TODO
 The foot is rigidly connected to the shaft so that as the angle of the ankle changes the encoder value changes accordingly. This ridgid attachment is achieved by screwing into the top of the part that connects the foot to the shaft and into a key in the shaft. This ensures that the foot and shaft rotate together for accurate encoder readings.
+
+## Testing and Results:
+
+TODO
 
 # Software and Electrical
 
