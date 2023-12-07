@@ -25,11 +25,18 @@ One technology that I found particularly interesting were these binary stiffness
 
 My concept to create angled flexures which had a range of stiffnesses was to use a spring and change the number of active coils. Changing the number of active coils actually changes the k constant of the spring which changes the amount of force needed to compress the spring x distance, thereby changing the stiffness of the spring. This leverages the formula: 
 
-I initially designed a winged piece that could be threaded through a spring and spun through the coils to either engage more or less coils. Once I had a first prototype of this design I did some preliminary force testing to see if the force to compress the spring changed depending on the number of coils engaged. I found that there was an increase in the stiffness when less coils were engaged and a decrease in the more coils that were engaged. After obtaining this proof of concept I moved on to refining my design.
-[insert image/video of first design]
+I initially designed a winged piece that could be threaded through a spring and spun through the coils to either engage more or less coils (seen below). Once I had a first prototype of this design I did some preliminary force testing to see if the force to compress the spring changed depending on the number of coils engaged. I found that there was an increase in the stiffness when less coils were engaged and a decrease in the more coils that were engaged. After obtaining this proof of concept I moved on to refining my design.
+
+
+![mechanism_v1](https://github.com/LizMetzger/Sloth-bot/assets/113066141/120e8b49-185a-49cf-861a-b5eab9a180a6)
+
 
 Design refinement:
 My initial design had many flaws but one key issue: I couldn’t change the number of coils without changing the distance between the top and bottom plate. To combat this, I decided to make the winged piece circular so it had more surface area to engage active coils. I also made a hole in the center of the winged piece and designed a linear guide that went in the hole and engaged with the circular piece. This allowed me to attach a servo to the linear guide which drove the rotational motion of the winged piece through the coils of the spring while allowing the circular piece to move in a passive manner up and down the guide.
+
+
+![Figure1](https://github.com/LizMetzger/Sloth-bot/assets/113066141/17999379-ffa5-464e-a3ab-b6e7f6bb07a5)
+
 
 For this mechanism to work properly it was important to have as tight of a fit between the circular piece and the linear guide as possible to decrease the amount of slack in the system. Having more features that were engaging between the pieces also helped it rotate easier even under loads. It is also important that the pitch of the wing piece matches exactly with the pitch of the spring. This improves the ease with which it can be threaded through the spring and prevents any unwanted compression of the spring.
 
