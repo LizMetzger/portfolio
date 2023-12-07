@@ -1,7 +1,7 @@
 --- 
 layout: post
 title: Dynamic Impedance Prosthetic Ankle From Scratch
-image: /videos/SLAM_demo.gif
+image: /videos/prosthetic_final.gif
 author: Liz Metzger
 ---
 
