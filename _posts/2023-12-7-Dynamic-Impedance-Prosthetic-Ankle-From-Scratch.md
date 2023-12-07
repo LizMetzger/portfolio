@@ -13,8 +13,10 @@ In this project I designed a mechanism to change the k constant of a spring by e
 
 The goal was to create a prosthetic ankle that provides a higher degree of biomimicry but is low-profile, low-cost, and modular. This meant that I was trying to avoid using big, expensive servos with complicated algorithms to simulate impedance, but also trying to create a device that would provide dynamic modulation of the impedance without the user having to manually change anything. It was also important that this be ank ankle prosthetic rather than a foot+ankle or ankle+lower leg prosthetic so that it can be combined with other prosthetics to provide patients with alternative options. 
 
-Mechanism Design
-Prototyping:
+# Mechanism Design
+
+## Prototyping:
+
 I explored a lot of different options for modulating the impedance in a joint. I started looking at ways to use cables to tension the joint, but decided this approach would require too many active servos to maintain the low-profile, low-cost design I was aiming for. I also looked at methods involving hydraulic pressure, piezoelectric materials, smart materials, servo control, and modulating friction. For various reasons I decided not to pursue these options.
 
 One technology that I found particularly interesting were these binary stiffness compliant mechanisms. The binary stiffness comes from the angled flexures on the mechanism either being locked out causing them to be completely rigid or being released which allows them to be very compliant. My theory was that if I could make a system where these supports were not a binary stiffness and instead had a range of stiffnesses, I would be able to create a mechanism that could effectively provide a range of impedances for a prosthetic ankle. To learn more about these mechanisms you can watch [this video](https://youtu.be/CV-zewG3lBY?si=0uB2ktMFIXk5ecfW) and I've included an image of one down below with the important features labeled.
@@ -31,7 +33,8 @@ I initially designed a winged piece that could be threaded through a spring and 
 ![mechanism_v1](https://github.com/LizMetzger/Sloth-bot/assets/113066141/120e8b49-185a-49cf-861a-b5eab9a180a6)
 
 
-Design refinement:
+## Design refinement:
+
 My initial design had many flaws but one key issue: I couldn’t change the number of coils without changing the distance between the top and bottom plate. To combat this, I decided to make the winged piece circular so it had more surface area to engage active coils. I also made a hole in the center of the winged piece and designed a linear guide that went in the hole and engaged with the circular piece. This allowed me to attach a servo to the linear guide which drove the rotational motion of the winged piece through the coils of the spring while allowing the circular piece to move in a passive manner up and down the guide.
 
 
@@ -53,25 +56,31 @@ I fixed this problem by designing a threaded outer housing that the circular win
 
 At this point I had a working mechanism for modulating impedance and I could move forward to integrating it into an ankle.
 
-Ankle Prosthetic Design
-Design Inception:
+# Ankle Prosthetic Design
+
+## Design Inception:
+
 The overall structure of the design was inspired by the binary stiffness compliant mechanisms as the springs are acting like the angled flexures and the position of the arms on my device are meant to reflect the piece that the angled flexures connect to. The rotary flexures are replaced by the arms and their ability to rotate around a pivot point. I tried to position the arms of the device so that the springs would deflect as little as possible during rotation.
 
 [insert drawings]
 
-Mechanism Integration:
+## Mechanism Integration:
+
 Since dorsiflexion is much more important to preserving a natural gait and has a much larger range of impedances than plantarflexion I decided to only install my dynamic impedance mechanism on the front of the ankle which controls dorsiflexion. This allowed me to design faster, decrease the overall profile of the design, and kept the system simpler. In the future it would not be unreasonable or difficult to install a second dynamic stiffness mechanism in the back of the foot.
 
 Both of the arms of the device rotate around a common axle but rotate independent of each other so when one side compresses the other side does not stretch. The springs are press slots on the arms that keep them in place during ankle rotation, but allows the spring some movement so that it doesn’t stretch. The back spring – responsible for plantarflexion– is also tightly press fit into the housing of the ankle which keeps it in place. 
 
 [insert picture of mechanism in the ankle]
 
-Sensor Choices and Installation:
+## Sensor Choices and Installation:
+
 TODO
 The foot is rigidly connected to the shaft so that as the angle of the ankle changes the encoder value changes accordingly. This ridgid attachment is achieved by screwing into the top of the part that connects the foot to the shaft and into a key in the shaft. This ensures that the foot and shaft rotate together for accurate encoder readings.
 
-Software and Electrical
-Power and Wiring:
+# Software and Electrical
+
+## Power and Wiring:
+
 To power my device I used three different power supplies. I used a 6V battery pack that passes through a 5V buck converter to power my TIva Launchpad,SN75HC126N non-inverting buffer, and encoder. I use the 3.3V from the Tiva to power the FSR and I also use a 11.2V lipo battery to power my servo. 
 
 My Tiva board had two pins configured to GPIO TX and RX which were used to communicate with the servo. I also had two pins on the Tiva configured for use with a quadrature encoder and set to read an A and B channel. By comparing the rising and falling edges of these two channels the direction of motion and the position of the encoder can be extrapolated. Finally I configured a pin to read ADV values so that I could measure the change in resistance of my FSR. Reading this change in resistance let me approximate the force that my sensor was experiencing.
@@ -82,4 +91,9 @@ In my design I used a non-inverting buffer to fake whole duplex communication be
 
 [insert half to full duplex diagram]
 
-Sensor Enabling and Integration:
+## Code Development:
+
+akfjklahiwf
+
+
+Check out my [github repo](https://github.com/LizMetzger/prosthetic_ankle) for this project! And feel free to reach out with questions!
