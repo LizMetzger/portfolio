@@ -46,7 +46,7 @@ For this mechanism to work properly it was important to have as tight of a fit b
 [insert video of the linear guide and the winged piece interacting]
 ** indicate the plates and the pieces **
 
-This was a good first step to solving the problem of changing the distance between the plates, but I soon realized that when you actually applied a force to the bottom plate there was nothing to stop the winged circular piece from sliding all the way up the linear guide until it hit the servo. This provided absolutely no resistance to the compression and created a large range of motion with zero impedance.
+This was a good first step to solving the problem of changing the distance between the plates, but I soon realized that when you actually applied a force to the bottom plate there was nothing to stop the winged circular piece from sliding all the way up the linear guide until it hit the servo. This provided absolutely no resistance to the compression and created a large range of motion with zero impedance. It also meant that once the spring actually started being compressed all of the coils were still being engaged.
 
 [insert before and after with pressing]
 
@@ -60,7 +60,15 @@ To evaluate if my mechanism was actually changing the stiffness of the spring in
 
 [insert testing video]
 
-I recorded five trials at each of the different numbers of active coils (2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5) and plotted the calculated k of the spring against the theoretical values of the spring. The k of the spring was found using $$k = F/x$$ and the theoretical values were calculated using $$k = d^4*G / 8D^3na$$ where $d$ = 0.125in (3.175), $G$ = 12,000,000 psi (79,00 Mpa), $D$ = 1.219in (30.9626mm), and na is the number of active coils. Below is a graph of my experimental results obtained by using the Instron compared to the theoretical values and I found that my results almost perfectly matched the theoretical results. I believe that the offset is due to compliance in the 3D printed and laser cut components of the device.
+I recorded five trials at each of the different numbers of active coils (2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5) and plotted the calculated k of the spring against the theoretical values of the spring. The k of the spring was found using 
+
+k = F/x
+
+and the theoretical values were calculated using 
+
+k = d^4*G / 8D^3na
+
+where d = 0.125in (3.175), G = 12,000,000 psi (79,00 Mpa), D = 1.219in (30.9626mm), and na is the number of active coils. Below is a graph of my experimental results obtained by using the Instron compared to the theoretical values and I found that my results almost perfectly matched the theoretical results. I believe that the offset is due to compliance in the 3D printed and laser cut components of the device.
 
 ![linear_cansiter_test_results](https://github.com/LizMetzger/prosthetic_ankle/assets/113066141/3efbd44f-4fe8-40c4-aad6-b05f0c2b12cf)
 
@@ -79,16 +87,30 @@ Since dorsiflexion is much more important to preserving a natural gait and has a
 
 Both of the arms of the device rotate around a common axle but rotate independent of each other so when one side compresses the other side does not stretch. The springs are press slots on the arms that keep them in place during ankle rotation, but allows the spring some movement so that it doesn’t stretch. The back spring – responsible for plantarflexion– is also tightly press fit into the housing of the ankle which keeps it in place. 
 
-[insert picture of mechanism in the ankle]
-
-## Sensor Choices and Installation:
-
-TODO
-The foot is rigidly connected to the shaft so that as the angle of the ankle changes the encoder value changes accordingly. This ridgid attachment is achieved by screwing into the top of the part that connects the foot to the shaft and into a key in the shaft. This ensures that the foot and shaft rotate together for accurate encoder readings.
+![ankle_prosthetic](https://github.com/LizMetzger/prosthetic_ankle/assets/113066141/2e6b5909-95be-4453-b8cf-d6e60981c24e)
 
 ## Testing and Results:
 
-TODO
+At this point I wanted to validate that embedding the linear design I had into an ankle resulted in a change in the impedance of the joint. I did this by using the Instron machine to measure the required force to reach a specific displacement. I placed the whole ankle design into the machine and positioned it so that the foot would press down on the ball of the foot to rotate the joint as the machine pressed down. I once again recorded five trials at each of the different numbers of active coils (2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5) and saved the force and displacement data from the Instron. In this testing we also put an inclinometer on the end of the foot to make sure that the angle the foot was reaching was relatively constant as the displacement was constant.
+
+[insert video of the foot testing]
+
+I used the captured data to calculate the impedance using this equation: 
+
+(Force from Instron (n)*distance from the pivot to where the force was applied (mm))/degrees traveled (deg)
+
+And I found that changing the number of coils changed the impedance of the joint as can be seen in the graph below and I moved onto integrating sensors into my design.
+
+![ankle_prosthetic_impedance_graph](https://github.com/LizMetzger/prosthetic_ankle/assets/113066141/bf045a81-03ba-4e92-aafb-c7bc8381ff0a)
+
+## Sensor Choices and Installation:
+
+In order to get the information I needed to design a control loop for my ankle I included a FRS and an encoder into the design of my device. The FRS provides readings about the amount of force that is being placed on the prosthetic, so when a person is standing only on the prosthetic there should be the highest force readings and when the foot is in the air there should be little to no force detected. I accomplished this by sandwiching the FRS between two parts on the bottom of the ankle so when the user steps down the pieces get pushed together and exert force on the sensor, but the gap is big enough that when the foot is off the floor there is zero force on the sensor. Knowing the force that is on the foot is important because I only want adjust the stiffness of the spring while the user’s foot is off the ground to minimize the force that the servo has to overcome to adjust the wings. Having less force allows for the use of a smaller and less expensive servo 
+
+I also chose to use a quadrature rotary encoder to measure the angle that the ankle is at. I chose this specific encoder because the Tiva API has a library meant to interface with quadrature encoders. The encoder was mounted on the side of the device with heat inserts that were put into the housing. An 8mm shoulder was used to track the rotation of the angle since the foot is rigidly connected to the shaft so that as the angle of the ankle changes the encoder value changes accordingly. This ridgid attachment is achieved by screwing into the top of the part that connects the foot to the shaft and into a key in the shaft. This ensures that the foot and shaft rotate together for accurate encoder readings which are important to characterize the user’s gait. 
+
+[insert image with the encoder and FRS labeled]
+
 
 # Software and Electrical
 
@@ -106,7 +128,7 @@ In my design I used a non-inverting buffer to fake whole duplex communication be
 
 ## Code Development:
 
-akfjklahiwf
+TODO
 
 
 Check out my [github repo](https://github.com/LizMetzger/prosthetic_ankle) for this project! And feel free to reach out with questions!
