@@ -1,9 +1,10 @@
----
+--- 
 layout: post
 title: Dynamic Impedance Prosthetic Ankle From Scratch
-image: /videos/sloth-bot-climb-up-down.gif
+image: /videos/SLAM_demo.gif
 author: Liz Metzger
 ---
+
 (C, Embedded Systems, Rapid Prototyping)
 
 [insert working video]
