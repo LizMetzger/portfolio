@@ -128,7 +128,16 @@ In my design I used a non-inverting buffer to fake whole duplex communication be
 
 ## Code Development:
 
-TODO
+The code for this project revolved around writing a controller that could take the data from the FRS and the encoder and control the servo to adjust the impedance of the joint accordingly. All of the development was done using C specifically for my embedded system. I wrote a library for each one of my sensors and one for my servo which was used in my main controller script. 
+
+The first step in getting my controller working was getting each of my individual components working with the Tiva. To get my FRS integrated I enabled its pin on the Tiva for reading ADC and wrote a function to read the data off the pin and convert it into units of force. I then wrote a function to write the data over UART so I could see the sensor readings. 
+
+To enable my encoder I configured two of the Tiva’s pins, one to read the encoder’s A channel and one to read the encoder’s B channel. To use the QEI library for quadrature encoders I had to use one of the locked pins on the Tiva, so I made sure that the data was being read correctly using an oscilloscope. I was also able to verify that the pins were configured correctly by writing functions to send the encoder data over UART as well. 
+
+The most difficult element to get working with the Tiva was the servo since there was not a version of the Dynamixel SDK that compiles on this microcontroller. Due to this I wrote functions that recreate the packets that dynamixel uses to send commands to their servo. I used one of their functions to generate the right CRC’s for each packet and sent them byte-wise over UART TX to the servo. When the message is done being sent I switch the controller from TX to RX mode so that it can receive a status packet or a reply from the servo. The controller only switches into TX mode when it is sending a message, otherwise it waits in RX mode. To debug these functions I used a logic analyzer to see exactly what bytes my code was sending to the servo compared to the standard Dynamixel SDK.
+
+Once I had all of the components working individually I wrote a simple controller that would read the force data and wait for the user’s foot to be off the ground before it was sent a position control message to the servo and adjust the impedance. The foot being off the ground was detected by the FRS readings being below a certain threshold and the servo would only receive one position to move to per step.
+
 
 
 Check out my [github repo](https://github.com/LizMetzger/prosthetic_ankle) for this project! And feel free to reach out with questions!
