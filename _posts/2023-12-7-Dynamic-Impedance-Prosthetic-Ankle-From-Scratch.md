@@ -53,11 +53,11 @@ To evaluate if my mechanism was actually changing the stiffness of the spring in
 
 I recorded five trials at each of the different numbers of active coils (2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5) and plotted the calculated k of the spring against the theoretical values of the spring. The k of the spring was found using 
 
-k = F/x
+![k_formula](https://github.com/LizMetzger/prosthetic_ankle/assets/113066141/6cb34d63-8336-4e99-aea1-ec37d4f9bd41)
 
 and the theoretical values were calculated using 
 
-k = d^4*G / 8D^3na
+![k_spring_formula](https://github.com/LizMetzger/prosthetic_ankle/assets/113066141/293addd3-3c1c-41be-a554-cb1b494a9715)
 
 where d = 0.125in (3.175), G = 12,000,000 psi (79,00 Mpa), D = 1.219in (30.9626mm), and na is the number of active coils. Below is a graph of my experimental results obtained by using the Instron compared to the theoretical values and I found that my results almost perfectly matched the theoretical results. I believe that the offset is due to compliance in the 3D printed and laser cut components of the device.
 
@@ -87,7 +87,7 @@ At this point I wanted to validate that embedding the linear design I had into a
 
 I used the captured data to calculate the impedance using this equation: 
 
-(Force from Instron (n)*distance from the pivot to where the force was applied (mm))/degrees traveled (deg)
+![impedance_calc](https://github.com/LizMetzger/prosthetic_ankle/assets/113066141/96f95e08-7e09-48c4-8263-c09f41bf07bc)
 
 And I found that changing the number of coils changed the impedance of the joint as can be seen in the graph below and I moved onto integrating sensors into my design.
 
