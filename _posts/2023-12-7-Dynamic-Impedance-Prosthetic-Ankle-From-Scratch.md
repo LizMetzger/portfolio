@@ -7,7 +7,7 @@ author: Liz Metzger
 
 (C, Embedded Systems, Rapid Prototyping)
 
-[insert working video]
+{% include youtube.html id="rJ3PUlvMFKA " %}
 
 In this project I designed a mechanism to change the k constant of a spring by engaging a variable number of active coils which changed the stiffness of the spring. I also built a control system for a servo that uses embedded C libraries I wrote to receive readings from a quadrature rotary encoder and a force resistive sensor (FSR). The control system sends position messages to the servo which causes modulations in the joint impedance when the foot is lifted off the floor in a stepping gait.
 
@@ -138,6 +138,8 @@ The most difficult element to get working with the Tiva was the servo since ther
 
 Once I had all of the components working individually I wrote a simple controller that would read the force data and wait for the user’s foot to be off the ground before it was sent a position control message to the servo and adjust the impedance. The foot being off the ground was detected by the FRS readings being below a certain threshold and the servo would only receive one position to move to per step.
 
+
+{% include youtube.html id="rJ3PUlvMFKA " %}
 
 
 Check out my [github repo](https://github.com/LizMetzger/prosthetic_ankle) for this project! And feel free to reach out with questions!
