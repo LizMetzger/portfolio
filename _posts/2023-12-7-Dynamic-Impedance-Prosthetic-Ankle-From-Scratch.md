@@ -93,7 +93,7 @@ Both of the arms of the device rotate around a common axle but rotate independen
 
 At this point I wanted to validate that embedding the linear design I had into an ankle resulted in a change in the impedance of the joint. I did this by using the Instron machine to measure the required force to reach a specific displacement. I placed the whole ankle design into the machine and positioned it so that the foot would press down on the ball of the foot to rotate the joint as the machine pressed down. I once again recorded five trials at each of the different numbers of active coils (2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5) and saved the force and displacement data from the Instron. In this testing we also put an inclinometer on the end of the foot to make sure that the angle the foot was reaching was relatively constant as the displacement was constant.
 
-[insert video of the foot testing]
+{% include youtube.html id="XcNMX_NZiDs" %}
 
 I used the captured data to calculate the impedance using this equation: 
 
@@ -136,10 +136,10 @@ To enable my encoder I configured two of the Tiva’s pins, one to read the enco
 
 The most difficult element to get working with the Tiva was the servo since there was not a version of the Dynamixel SDK that compiles on this microcontroller. Due to this I wrote functions that recreate the packets that dynamixel uses to send commands to their servo. I used one of their functions to generate the right CRC’s for each packet and sent them byte-wise over UART TX to the servo. When the message is done being sent I switch the controller from TX to RX mode so that it can receive a status packet or a reply from the servo. The controller only switches into TX mode when it is sending a message, otherwise it waits in RX mode. To debug these functions I used a logic analyzer to see exactly what bytes my code was sending to the servo compared to the standard Dynamixel SDK.
 
-Once I had all of the components working individually I wrote a simple controller that would read the force data and wait for the user’s foot to be off the ground before it was sent a position control message to the servo and adjust the impedance. The foot being off the ground was detected by the FRS readings being below a certain threshold and the servo would only receive one position to move to per step.
+Once I had all of the components working individually I wrote a simple controller that would read the force data and wait for the user’s foot to be off the ground before it was sent a position control message to the servo and adjust the impedance. The foot being off the ground was detected by the FRS readings being below a certain threshold and the servo would only receive one position to move to per step. In the video below you can see how the wings adjust when my foot is off the ground.
 
 
-{% include youtube.html id="rJ3PUlvMFKA " %}
+{% include youtube.html id="" %}
 
 
 Check out my [github repo](https://github.com/LizMetzger/prosthetic_ankle) for this project! And feel free to reach out with questions!
