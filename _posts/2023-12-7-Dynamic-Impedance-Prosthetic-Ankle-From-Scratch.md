@@ -109,11 +109,11 @@ To power my device I used three different power supplies. I used a 6V battery pa
 
 My Tiva board had two pins configured to GPIO TX and RX which were used to communicate with the servo. I also had two pins on the Tiva configured for use with a quadrature encoder and set to read an A and B channel. By comparing the rising and falling edges of these two channels the direction of motion and the position of the encoder can be extrapolated. Finally I configured a pin to read ADV values so that I could measure the change in resistance of my FSR. Reading this change in resistance let me approximate the force that my sensor was experiencing.
 
-[insert circuit diagram]
+![circuit_rrosthetic](https://github.com/LizMetzger/prosthetic_ankle/assets/113066141/923645ca-a908-45b9-8e8e-b983a6319354)
 
 In my design I used a non-inverting buffer to fake whole duplex communication between the Tiva (uses whole duplex) and the servo (used half  duplex). Basically the Tx of my Tiva was wired to the input of one of the buffers and the data cable from the circuit was connected to the output of that buffer. The servo data was also connected to the input of another buffer that was wired to the Rx of my Tiva board. This was done so that when one buffer was high the board was only transmitting information to the servo and the other line was essentially dead. Then when the transmission was done the Tx pin could be set to low and the Rx pin would get set to high switching the board from being in transmitting mode to receiving. This system ensures that the board is always either transmitting or receiving as it would with half duplex communication allowing me to interface with the servo.
 
-[insert half to full duplex diagram]
+![half_duplex](https://github.com/LizMetzger/prosthetic_ankle/assets/113066141/07d90424-90e3-4175-8511-54c0891c1133)
 
 ## Code Development:
 
