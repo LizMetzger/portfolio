@@ -21,25 +21,19 @@ I explored a lot of different options for modulating the impedance in a joint. I
 
 One technology that I found particularly interesting were these binary stiffness compliant mechanisms. The binary stiffness comes from the angled flexures on the mechanism either being locked out causing them to be completely rigid or being released which allows them to be very compliant. My theory was that if I could make a system where these supports were not a binary stiffness and instead had a range of stiffnesses, I would be able to create a mechanism that could effectively provide a range of impedances for a prosthetic ankle. To learn more about these mechanisms you can watch [this video](https://youtu.be/CV-zewG3lBY?si=0uB2ktMFIXk5ecfW) and I've included an image of one down below with the important features labeled.
 
-
 ![labeled_compliant_mech](https://github.com/LizMetzger/Sloth-bot/assets/113066141/69dad754-f5d0-4d69-9ad3-eb84bfd0a211)
-
 
 My concept to create angled flexures which had a range of stiffnesses was to use a spring and change the number of active coils. Changing the number of active coils actually changes the k constant of the spring which changes the amount of force needed to compress the spring x distance, thereby changing the stiffness of the spring. This leverages the formula: 
 
 I initially designed a winged piece that could be threaded through a spring and spun through the coils to either engage more or less coils (seen below). Once I had a first prototype of this design I did some preliminary force testing to see if the force to compress the spring changed depending on the number of coils engaged. I found that there was an increase in the stiffness when less coils were engaged and a decrease in the more coils that were engaged. After obtaining this proof of concept I moved on to refining my design.
 
-
 ![mechanism_v1](https://github.com/LizMetzger/prosthetic_ankle/assets/113066141/22f153f3-67a2-400d-95a8-6acfa69f7d81)
-
 
 ## Design refinement:
 
 My initial design had many flaws but one key issue: I couldn’t change the number of coils without changing the distance between the top and bottom plate. To combat this, I decided to make the winged piece circular so it had more surface area to engage active coils. I also made a hole in the center of the winged piece and designed a linear guide that went in the hole and engaged with the circular piece. This allowed me to attach a servo to the linear guide which drove the rotational motion of the winged piece through the coils of the spring while allowing the circular piece to move in a passive manner up and down the guide.
 
-
 ![Figure1](https://github.com/LizMetzger/Sloth-bot/assets/113066141/17999379-ffa5-464e-a3ab-b6e7f6bb07a5)
-
 
 For this mechanism to work properly it was important to have as tight of a fit between the circular piece and the linear guide as possible to decrease the amount of slack in the system. Having more features that were engaging between the pieces also helped it rotate easier even under loads. It is also important that the pitch of the wing piece matches exactly with the pitch of the spring. This improves the ease with which it can be threaded through the spring and prevents any unwanted compression of the spring.
 
@@ -68,7 +62,6 @@ k = d^4*G / 8D^3na
 where d = 0.125in (3.175), G = 12,000,000 psi (79,00 Mpa), D = 1.219in (30.9626mm), and na is the number of active coils. Below is a graph of my experimental results obtained by using the Instron compared to the theoretical values and I found that my results almost perfectly matched the theoretical results. I believe that the offset is due to compliance in the 3D printed and laser cut components of the device.
 
 ![linear_cansiter_test_results](https://github.com/LizMetzger/prosthetic_ankle/assets/113066141/3efbd44f-4fe8-40c4-aad6-b05f0c2b12cf)
-
 
 # Ankle Prosthetic Design
 
@@ -106,8 +99,7 @@ In order to get the information I needed to design a control loop for my ankle I
 
 I also chose to use a quadrature rotary encoder to measure the angle that the ankle is at. I chose this specific encoder because the Tiva API has a library meant to interface with quadrature encoders. The encoder was mounted on the side of the device with heat inserts that were put into the housing. An 8mm shoulder was used to track the rotation of the angle since the foot is rigidly connected to the shaft so that as the angle of the ankle changes the encoder value changes accordingly. This ridgid attachment is achieved by screwing into the top of the part that connects the foot to the shaft and into a key in the shaft. This ensures that the foot and shaft rotate together for accurate encoder readings which are important to characterize the user’s gait. 
 
-[insert image with the encoder and FRS labeled]
-
+![labeled_sensors](https://github.com/LizMetzger/prosthetic_ankle/assets/113066141/0e52f510-7e84-4ff3-a23e-cecacfbcdc1e)
 
 # Software and Electrical
 
