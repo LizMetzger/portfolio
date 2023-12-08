@@ -69,7 +69,7 @@ where d = 0.125in (3.175), G = 12,000,000 psi (79,00 Mpa), D = 1.219in (30.9626m
 
 The overall structure of the design was inspired by the binary stiffness compliant mechanisms as the springs are acting like the angled flexures and the position of the arms on my device are meant to reflect the piece that the angled flexures connect to. The rotary flexures are replaced by the arms and their ability to rotate around a pivot point. I tried to position the arms of the device so that the springs would deflect as little as possible during rotation.
 
-[insert drawings]
+![hand_drawings](https://github.com/LizMetzger/prosthetic_ankle/assets/113066141/50cb8ba0-e7d9-4151-8c50-00ff1988c49e)
 
 ## Mechanism Integration:
 
