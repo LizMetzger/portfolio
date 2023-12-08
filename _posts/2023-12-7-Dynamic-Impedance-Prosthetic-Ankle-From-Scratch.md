@@ -43,12 +43,9 @@ My initial design had many flaws but one key issue: I couldn’t change the numb
 
 For this mechanism to work properly it was important to have as tight of a fit between the circular piece and the linear guide as possible to decrease the amount of slack in the system. Having more features that were engaging between the pieces also helped it rotate easier even under loads. It is also important that the pitch of the wing piece matches exactly with the pitch of the spring. This improves the ease with which it can be threaded through the spring and prevents any unwanted compression of the spring.
 
-[insert video of the linear guide and the winged piece interacting]
-** indicate the plates and the pieces **
-
 This was a good first step to solving the problem of changing the distance between the plates, but I soon realized that when you actually applied a force to the bottom plate there was nothing to stop the winged circular piece from sliding all the way up the linear guide until it hit the servo. This provided absolutely no resistance to the compression and created a large range of motion with zero impedance. It also meant that once the spring actually started being compressed all of the coils were still being engaged.
 
-[insert before and after with pressing]
+![first_iter_before_after](https://github.com/LizMetzger/prosthetic_ankle/assets/113066141/2ebf623e-008b-47a7-b7dc-448a2436a715)
 
 I fixed this problem by designing a threaded outer housing that the circular winged piece could engage with and thread through as it was driven through the coils of the servo. I fixed this outer housing to the top plate using standoffs so it was always a constant distance from the plate and servo. This meant that as the servo drove the winged piece through the spring it was also being threaded through the outer housing so that when the bottom plate was pressed the winged piece could not move and the spring would be immediately engaged.
 
@@ -139,7 +136,7 @@ The most difficult element to get working with the Tiva was the servo since ther
 Once I had all of the components working individually I wrote a simple controller that would read the force data and wait for the user’s foot to be off the ground before it was sent a position control message to the servo and adjust the impedance. The foot being off the ground was detected by the FRS readings being below a certain threshold and the servo would only receive one position to move to per step. In the video below you can see how the wings adjust when my foot is off the ground.
 
 
-{% include youtube.html id="" %}
+{% include youtube.html id="EPWIFkha0Og" %}
 
 
 Check out my [github repo](https://github.com/LizMetzger/prosthetic_ankle) for this project! And feel free to reach out with questions!
