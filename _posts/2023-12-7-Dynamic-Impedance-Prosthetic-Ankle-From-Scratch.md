@@ -52,13 +52,13 @@ This was a good first step to solving the problem of changing the distance betwe
 
 I fixed this problem by designing a threaded outer housing that the circular winged piece could engage with and thread through as it was driven through the coils of the servo. I fixed this outer housing to the top plate using standoffs so it was always a constant distance from the plate and servo. This meant that as the servo drove the winged piece through the spring it was also being threaded through the outer housing so that when the bottom plate was pressed the winged piece could not move and the spring would be immediately engaged.
 
-[insert picture/video of this]
+{% include youtube.html id="enZqdokqWhk" %}
 
 ## Testing and Results:
 
 To evaluate if my mechanism was actually changing the stiffness of the spring in the predicted way, I did some quantitative testing of the mechanism using an Instron force machine. I placed the canister in the machine and recorded the force required to reach a constant displacement. The machine kept track and stored the data for the detected force at all displacements so I was able to graph and extrapolate a k value.
 
-[insert testing video]
+{% include youtube.html id="MuNFp_xrCB8" %}
 
 I recorded five trials at each of the different numbers of active coils (2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5) and plotted the calculated k of the spring against the theoretical values of the spring. The k of the spring was found using 
 
