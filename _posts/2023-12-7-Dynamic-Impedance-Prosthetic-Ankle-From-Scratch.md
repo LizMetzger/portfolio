@@ -30,7 +30,7 @@ My concept to create angled flexures which had a range of stiffnesses was to use
 I initially designed a winged piece that could be threaded through a spring and spun through the coils to either engage more or less coils (seen below). Once I had a first prototype of this design I did some preliminary force testing to see if the force to compress the spring changed depending on the number of coils engaged. I found that there was an increase in the stiffness when less coils were engaged and a decrease in the more coils that were engaged. After obtaining this proof of concept I moved on to refining my design.
 
 
-![mechanism_v1](https://github.com/LizMetzger/Sloth-bot/assets/113066141/120e8b49-185a-49cf-861a-b5eab9a180a6)
+![mechanism_v1](https://github.com/LizMetzger/prosthetic_ankle/assets/113066141/22f153f3-67a2-400d-95a8-6acfa69f7d81)
 
 
 ## Design refinement:
